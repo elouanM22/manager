@@ -3,14 +3,19 @@ let playerScore = 0
 let wrongAttempt = 0
 let indexNumber = 0
 
+let questions = [];
+
 fetch('./data/questions.json')
     .then(response => response.json())
     .then(data => {
-        const questions = data;
-        console.log(questions);
-        handleQuestions(questions); // call handleQuestions function and pass the questions array
+        questions = data;
+        // Utilisez ici les questions chargées depuis le fichier JSON
     })
     .catch(error => console.error(error));
+
+
+// Log the questions to the console
+console.log(questions);
 
 let shuffledQuestions = [] //empty array to hold shuffled selected questions
 
