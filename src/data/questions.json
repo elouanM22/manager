@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "How many days makes a week ?",
+      "optionA": "10 days",
+      "optionB": "14 days",
+      "optionC": "5 days",
+      "optionD": "7 days",
+      "correctOption": "optionD"
+    },
+    {
+      "id": 2,
+      "question": "How many players are allowed on a soccer pitch ?",
+      "optionA": "10 players",
+      "optionB": "11 players",
+      "optionC": "9 players",
+      "optionD": "12 players",
+      "correctOption": "optionB"
+    },
+    {
+      "id": 3,
+      "question": "Who was the first President of USA ?",
+      "optionA": "Donald Trump",
+      "optionB": "Barack Obama",
+      "optionC": "Abraham Lincoln",
+      "optionD": "George Washington",
+      "correctOption": "optionD"
+    },
+    {
+      "id": 4,
+      "question": "30 days has ______ ?",
+      "optionA": "January",
+      "optionB": "December",
+      "optionC": "June",
+      "optionD": "August",
+      "correctOption": "optionC"
+    },
+    {
+      "id": 5,
+      "question": "How manay hours can be found in a day ?",
+      "optionA": "30 hours",
+      "optionB": "38 hours",
+      "optionC": "48 hours",
+      "optionD": "24 hours",
+      "correctOption": "optionD"
+    },
+    {
+      "id": 6,
+      "question": "Which is the longest river in the world ?",
+      "optionA": "River Nile",
+      "optionB": "Long River",
+      "optionC": "River Niger",
+      "optionD": "Lake Chad",
+      "correctOption": "optionA"
+    },
+    {
+      "id": 7,
+      "question": "_____ is the hottest Continent on Earth ?",
+      "optionA": "Oceania",
+      "optionB": "Antarctica",
+      "optionC": "Africa",
+      "optionD": "North America",
+      "correctOption": "optionC"
+    },
+    {
+      "id": 8,
+      "question": "Which country is the largest in the world ?",
+      "optionA": "Russia",
+      "optionB": "Canada",
+      "optionC": "Africa",
+      "optionD": "Egypt",
+      "correctOption": "optionA"
+    },
+    {
+      "id": 9,
+      "question": "\"You Can't see me\" is a popular saying by",
+      "optionA": "Eminem",
+      "optionB": "Bill Gates",
+      "optionC": "Chris Brown",
+      "optionD": "John Cena",
+      "correctOption": "optionD"
+    },
+    {
+      "id": 10,
+      "question": "Where is the world tallest building located ?",
+      "optionA": "Africa",
+      "optionB": "California",
+      "optionC": "Dubai",
+      "optionD": "Italy",
+      "correctOption": "optionC"
+    }
+  ]
+}
