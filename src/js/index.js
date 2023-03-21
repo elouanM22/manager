@@ -1,4 +1,9 @@
-fetch('data/questions.json')
+let questionNumber = 1
+let playerScore = 0
+let wrongAttempt = 0
+let indexNumber = 0
+
+fetch('./data/questions.json')
     .then(response => response.json())
     .then(data => {
         const questions = data;
@@ -20,10 +25,6 @@ function handleQuestions(questions) { // add questions parameter
 }
 
 
-let questionNumber = 1
-let playerScore = 0
-let wrongAttempt = 0
-let indexNumber = 0
 
 // function for displaying next question in the array to dom
 function NextQuestion(index) {
