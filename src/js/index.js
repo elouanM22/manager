@@ -1,3 +1,5 @@
+// thèmes particulier : mdp, 2fa, pare feu, antivirus, habitudes
+// thèmes professionnel : mdp, 2fa, pare feu, antivirus, habitudes, législatif
 const questions = [
     {
         id: 0,
@@ -82,6 +84,16 @@ const questions = [
     },
     {
         id: 9,
+        question: "Quel niveau",
+        optionA: "nul",
+        optionB: "moyen",
+        optionC: "fort",
+        nextA: 2,
+        nextB: 3,
+        nextC: 4
+    },
+    {
+        id: 10,
         question: `"You Can't see me" is a popular saying by`,
         optionA: "Eminem",
         optionB: "Bill Gates",
@@ -90,7 +102,7 @@ const questions = [
         correctOption: "optionD"
     },
     {
-        id: 10,
+        id: 11,
         question: "Where is the world tallest building located ?",
         optionA: "Africa",
         optionB: "California",
@@ -99,7 +111,7 @@ const questions = [
         correctOption: "optionC"
     },
     {
-        id: 11,
+        id: 12,
         question: "The longest river in the United Kingdom is ?",
         optionA: "River Severn",
         optionB: "River Mersey",
@@ -108,7 +120,7 @@ const questions = [
         correctOption: "optionA"
     },
     {
-        id: 12,
+        id: 13,
         question: "How many permanent teeth does a dog have ?",
         optionA: "38",
         optionB: "42",
@@ -117,7 +129,7 @@ const questions = [
         correctOption: "optionB"
     },
     {
-        id: 13,
+        id: 14,
         question: "Which national team won the football World cup in 2018 ?",
         optionA: "England",
         optionB: "Brazil",
@@ -126,7 +138,7 @@ const questions = [
         correctOption: "optionD"
     },
     {
-        id: 14,
+        id: 15,
         question: "Which US state was Donald Trump Born ?",
         optionA: "New York",
         optionB: "California",
@@ -135,7 +147,7 @@ const questions = [
         correctOption: "optionA"
     },
     {
-        id: 15,
+        id: 16,
         question: "How man states does Nigeria have ?",
         optionA: "24",
         optionB: "30",
@@ -149,6 +161,7 @@ let questionNumber = 1
 let playerScore = 0
 let wrongAttempt = 0
 var indexNumber = 0
+var themes = []
 
 
 // function for displaying next question in the array to dom
@@ -167,6 +180,7 @@ function NextQuestion(index) {
 function checkForAnswer() {
     let currentQuestion = questions[indexNumber];
     let options = document.getElementsByName("option");
+    let currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
 
     // Vérification pour s'assurer qu'une option a été choisie
     if (options[0].checked === false && options[1].checked === false && options[2].checked === false && options[3].checked == false) {
@@ -174,7 +188,21 @@ function checkForAnswer() {
         return false;
     }
 
-    let ret = false;
+    //checking if checked radio button is same as answer
+    options.forEach((option) => {
+        if (option.checked === true && option.value === currentQuestionAnswer) {
+            document.getElementById(correctOption).style.backgroundColor = "green"
+            playerScore++
+            indexNumber++
+            //set to delay question number till when next question loads
+            setTimeout(() => {
+                questionNumber++
+            }, 1000)
+        }
+    })
+
+    let ret = false
+
     options.forEach((option) => {
         if (option.checked) {
             switch (option.value) {
@@ -194,12 +222,13 @@ function checkForAnswer() {
                     ret = false;
                     break;
             }
+            if (option.value != currentQuestionAnswer) {
+                themes.push(currentQuestionAnswer.theme)
+            }
         }
     });
-    return ret;
+    return ret
 }
-
-
 
 
 //called when the next button is called
@@ -218,7 +247,7 @@ function handleNextQuestion() {
             handleEndGame()
         }
         resetOptionBackground()
-    }, 1000);
+    }, 100);
 }
 
 //sets options background back to null after display the right/wrong colors
