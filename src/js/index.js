@@ -1,27 +1,25 @@
-let id = 0
-
 const questions = [
     {
-        id: id++,
-        question: "QUESTION ",
-        optionA: "10 days",
-        optionB: "14 days",
-        optionC: "5 days",
-        optionD: "7 days",
-        correctOption: "optionD"
+        id: 0,
+        question: "Pro ou perso",
+        optionA: "Pro",
+        optionB: "Perso",
+        nextA: 1,
+        nextB: 9
     },
     {
-        id: id++,
-        question: "How many players are allowed on a soccer pitch ?",
-        optionA: "10 players",
-        optionB: "11 players",
-        optionC: "9 players",
-        optionD: "12 players",
-        correctOption: "optionB"
+        id: 1,
+        question: "Quel niveau",
+        optionA: "nul",
+        optionB: "moyen",
+        optionC: "fort",
+        nextA: 2,
+        nextB: 3,
+        nextC: 4
     },
     {
-        id: id++,
-        question: "Who was the first President of USA ?",
+        id: 2,
+        question: "question nul ?",
         optionA: "Donald Trump",
         optionB: "Barack Obama",
         optionC: "Abraham Lincoln",
@@ -29,8 +27,8 @@ const questions = [
         correctOption: "optionD"
     },
     {
-        id: id++,
-        question: "30 days has ______ ?",
+        id: 3,
+        question: "question moyen ",
         optionA: "January",
         optionB: "December",
         optionC: "June",
@@ -38,8 +36,8 @@ const questions = [
         correctOption: "optionC"
     },
     {
-        id: id++,
-        question: "How manay hours can be found in a day ?",
+        id: 4,
+        question: "question fort",
         optionA: "30 hours",
         optionB: "38 hours",
         optionC: "48 hours",
@@ -47,7 +45,7 @@ const questions = [
         correctOption: "optionD"
     },
     {
-        id: id++,
+        id: 5,
         question: "Which is the longest river in the world ?",
         optionA: "River Nile",
         optionB: "Long River",
@@ -56,7 +54,7 @@ const questions = [
         correctOption: "optionA"
     },
     {
-        id: id++,
+        id: 6,
         question: "_____ is the hottest Continent on Earth ?",
         optionA: "Oceania",
         optionB: "Antarctica",
@@ -65,7 +63,7 @@ const questions = [
         correctOption: "optionC"
     },
     {
-        id: id++,
+        id: 7,
         question: "Which country is the largest in the world ?",
         optionA: "Russia",
         optionB: "Canada",
@@ -74,7 +72,7 @@ const questions = [
         correctOption: "optionA"
     },
     {
-        id: id++,
+        id: 8,
         question: "Which of these numbers is an odd number ?",
         optionA: "Ten",
         optionB: "Twelve",
@@ -83,7 +81,7 @@ const questions = [
         correctOption: "optionD"
     },
     {
-        id: id++,
+        id: 9,
         question: `"You Can't see me" is a popular saying by`,
         optionA: "Eminem",
         optionB: "Bill Gates",
@@ -92,7 +90,7 @@ const questions = [
         correctOption: "optionD"
     },
     {
-        id: id++,
+        id: 10,
         question: "Where is the world tallest building located ?",
         optionA: "Africa",
         optionB: "California",
@@ -101,7 +99,7 @@ const questions = [
         correctOption: "optionC"
     },
     {
-        id: id++,
+        id: 11,
         question: "The longest river in the United Kingdom is ?",
         optionA: "River Severn",
         optionB: "River Mersey",
@@ -110,7 +108,7 @@ const questions = [
         correctOption: "optionA"
     },
     {
-        id: id++,
+        id: 12,
         question: "How many permanent teeth does a dog have ?",
         optionA: "38",
         optionB: "42",
@@ -119,7 +117,7 @@ const questions = [
         correctOption: "optionB"
     },
     {
-        id: id++,
+        id: 13,
         question: "Which national team won the football World cup in 2018 ?",
         optionA: "England",
         optionB: "Brazil",
@@ -128,7 +126,7 @@ const questions = [
         correctOption: "optionD"
     },
     {
-        id: id++,
+        id: 14,
         question: "Which US state was Donald Trump Born ?",
         optionA: "New York",
         optionB: "California",
@@ -137,7 +135,7 @@ const questions = [
         correctOption: "optionA"
     },
     {
-        id: id++,
+        id: 15,
         question: "How man states does Nigeria have ?",
         optionA: "24",
         optionB: "30",
@@ -148,20 +146,6 @@ const questions = [
 ]
 
 
-let shuffledQuestions = [] //empty array to hold shuffled selected questions
-
-function handleQuestions() {
-    //function to shuffle and push 10 questions to shuffledQuestions array
-    while (shuffledQuestions.length <= 9) {
-        const random = questions[Math.floor(Math.random() * questions.length)]
-        if (!shuffledQuestions.includes(random)) {
-            shuffledQuestions.push(random)
-        }
-    }
-    console.log(questions.length)
-    console.log(shuffledQuestions)
-}
-
 
 let questionNumber = 1
 let playerScore = 0
@@ -170,8 +154,7 @@ let indexNumber = 0
 
 // function for displaying next question in the array to dom
 function NextQuestion(index) {
-    handleQuestions()
-    const currentQuestion = shuffledQuestions[index]
+    const currentQuestion = questions[0]
     document.getElementById("question-number").innerHTML = currentQuestion.id
     document.getElementById("player-score").innerHTML = playerScore
     document.getElementById("display-question").innerHTML = currentQuestion.question;
@@ -180,14 +163,16 @@ function NextQuestion(index) {
     document.getElementById("option-three-label").innerHTML = currentQuestion.optionC;
     document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
 
+
+
 }
 
 
 function checkForAnswer() {
-    const currentQuestion = shuffledQuestions[indexNumber] //gets current Question 
+    const currentQuestion = questions[indexNumber] //gets current Question 
     const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
     const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
-    let correctOption = null
+    let checkedOption = null
 
     options.forEach((option) => {
         if (option.value === currentQuestionAnswer) {
@@ -201,30 +186,26 @@ function checkForAnswer() {
         document.getElementById('option-modal').style.display = "flex"
     }
 
-    //checking if checked radio button is same as answer
     options.forEach((option) => {
-        if (option.checked === true && option.value === currentQuestionAnswer) {
-            document.getElementById(correctOption).style.backgroundColor = "green"
-            playerScore++
-            indexNumber++
-            //set to delay question number till when next question loads
-            setTimeout(() => {
-                questionNumber++
-            }, 1000)
-        }
+        if (option.checked === true) {
+            switch (option.value) {
+                case "optionA":
+                    console.log(questions[indexNumber].nextA)
+                    return questions[indexNumber].nextA;
+                case "optionB":
+                    console.log(questions[indexNumber].nextB)
+                    return questions[indexNumber].nextB;
+                case "optionC":
+                    console.log(questions[indexNumber].nextC)
+                    return questions[indexNumber].nextC;
+                case "optionD":
+                    console.log(questions[indexNumber].nextD)
+                    return questions[indexNumber].nextD;
+            }
 
-        else if (option.checked && option.value !== currentQuestionAnswer) {
-            const wrongLabelId = option.labels[0].id
-            document.getElementById(wrongLabelId).style.backgroundColor = "red"
-            document.getElementById(correctOption).style.backgroundColor = "green"
-            wrongAttempt++
-            indexNumber++
-            //set to delay question number till when next question loads
-            setTimeout(() => {
-                questionNumber++
-            }, 1000)
         }
     })
+
 }
 
 
@@ -235,7 +216,8 @@ function handleNextQuestion() {
     unCheckRadioButtons()
     //delays next question displaying for a second
     setTimeout(() => {
-        if (indexNumber <= 9) {
+        if (indexNumber <= 8) {
+
             NextQuestion(indexNumber)
         }
         else {
