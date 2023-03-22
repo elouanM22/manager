@@ -4,8 +4,6 @@
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
     margin: 0;
     padding: 0;
     background-image: url('/src/img/fond.png');
@@ -44,7 +42,7 @@ header{
 
 /*Paramétrage du footer*/
 footer{
-    position: absolute;
+    position: relative;
     bottom: 0; 
     width: 100%; 
     background-color: #2A2F40;
@@ -54,6 +52,7 @@ footer{
 
 .bouton {
     margin-top: 1.2em;
+    padding-top: 1em;
 }
 
 .bouton a{
@@ -61,7 +60,3 @@ footer{
     text-decoration: none;
 }
 
-.bouton a{
-    color: white;
-    text-decoration: none;
-} 
