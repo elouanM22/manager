@@ -8,6 +8,7 @@ body {
     padding: 0;
     background-image: url('/src/img/fond.png');
     background-size:cover;
+    min-height: 100vh;
 }
 
 /*Paramétrage du header*/
