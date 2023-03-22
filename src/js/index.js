@@ -7,17 +7,19 @@ const questions = [
         optionA: "Pro",
         optionB: "Perso",
         nextA: 1,
-        nextB: 9
+        nextB: 9,
+        correctOption: "optionB",
+        theme: "pro"
     },
     {
         id: 1,
-        question: "Quel niveau",
-        optionA: "nul",
-        optionB: "moyen",
-        optionC: "fort",
-        nextA: 2,
-        nextB: 3,
-        nextC: 4
+        question: "Cb de caractères dans votre mdp ?",
+        optionA: "1",
+        optionB: "785",
+        nextA: 1,
+        nextB: 9,
+        correctOption: "optionB",
+        theme: "mdp"
     },
     {
         id: 2,
@@ -188,19 +190,6 @@ function checkForAnswer() {
         return false;
     }
 
-    //checking if checked radio button is same as answer
-    options.forEach((option) => {
-        if (option.checked === true && option.value === currentQuestionAnswer) {
-            document.getElementById(correctOption).style.backgroundColor = "green"
-            playerScore++
-            indexNumber++
-            //set to delay question number till when next question loads
-            setTimeout(() => {
-                questionNumber++
-            }, 1000)
-        }
-    })
-
     let ret = false
 
     options.forEach((option) => {
@@ -223,10 +212,12 @@ function checkForAnswer() {
                     break;
             }
             if (option.value != currentQuestionAnswer) {
-                themes.push(currentQuestionAnswer.theme)
+                themes.push(currentQuestion.theme)
+
             }
         }
     });
+    console.log("themes: " + themes)
     return ret
 }
 
