@@ -178,6 +178,9 @@ function NextQuestion(index) {
     document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
 }
 
+function getNbOptions() {
+    return document.getElementsByName("option").length;
+}
 
 function checkForAnswer() {
     let currentQuestion = questions[indexNumber];
