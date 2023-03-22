@@ -139,15 +139,33 @@
     },
 {
         id: 11,
-        question: "Qu'est ce que l'ingenierie sociale ?",
-        optionA: "Une technique qui utilise la psycologie humaine et la manipulation afin de faire reveler aux personnes visées des informations confidentielles.",
-        optionB: "Une pratique utilisant machine learning et IA afin d'analyser le comportement humain.",
-        optionC: "L'utilisaton du charisme et de la concilience pour influencer les decisions d'une personne.",
-        optionD: "Une technique qui utilise les reseaux sociaux pour répandre de la mésinformation.",
+        question: "Que devriez vous faire en vous connectant sur un réseau public ?",
+        optionA: "Eviter d'accéder a des informations personnelles ou sensibles.",
+        optionB: "Utiliser un VPN.",
+        optionC: "Couper le Bluetooth et le partage de fichiers sur votre appareil.",
+        optionD: "Toutes ces reponses",
         nextA: 12,
         nextB: 12,
         nextC: 12,
         nextD: 12,
+        correctOption: "optionD",
+        theme: "pratique"
+    },
+{
+        id: 12,
+        question: "Faites vous régulièrement des sauvegardes de vos données ?",
+        optionA: "Oui",
+        optionB: "Non",
+        nextA: 13,
+        nextB: 13,
         correctOption: "optionA",
-        theme: "theorie"
+        theme: "sauvegarde"
+    },
+{
+        id: 13,
+        question: "Vos sauvegardes sont-elles séparés geographiquement de votre appareil",
+        optionA: "Oui",
+        optionB: "Non",
+        correctOption: "optionA",
+        theme: "sauvegarde"
     },
