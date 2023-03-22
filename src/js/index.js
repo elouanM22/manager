@@ -4,7 +4,7 @@ const questions = [
     id++,
     {
         id: id,
-        question: "QUESTION " + this.id,
+        question: "QUESTION ",
         optionA: "10 days",
         optionB: "14 days",
         optionC: "5 days",
