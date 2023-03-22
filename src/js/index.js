@@ -1,14 +1,19 @@
+let id = 0;
+
 const questions = [
+    id++,
     {
-        question: "How many days makes a week ?",
+        id: id,
+        question: "QUESTION " + this.id,
         optionA: "10 days",
         optionB: "14 days",
         optionC: "5 days",
         optionD: "7 days",
         correctOption: "optionD"
     },
-
+    id++,
     {
+        id: id,
         question: "How many players are allowed on a soccer pitch ?",
         optionA: "10 players",
         optionB: "11 players",
@@ -16,8 +21,9 @@ const questions = [
         optionD: "12 players",
         correctOption: "optionB"
     },
-
+    id++,
     {
+        id: id,
         question: "Who was the first President of USA ?",
         optionA: "Donald Trump",
         optionB: "Barack Obama",
@@ -25,8 +31,9 @@ const questions = [
         optionD: "George Washington",
         correctOption: "optionD"
     },
-
+    id++,
     {
+        id: id,
         question: "30 days has ______ ?",
         optionA: "January",
         optionB: "December",
@@ -34,8 +41,9 @@ const questions = [
         optionD: "August",
         correctOption: "optionC"
     },
-
+    id++,
     {
+        id: id,
         question: "How manay hours can be found in a day ?",
         optionA: "30 hours",
         optionB: "38 hours",
@@ -43,8 +51,9 @@ const questions = [
         optionD: "24 hours",
         correctOption: "optionD"
     },
-
+    id++,
     {
+        id: id,
         question: "Which is the longest river in the world ?",
         optionA: "River Nile",
         optionB: "Long River",
@@ -52,8 +61,9 @@ const questions = [
         optionD: "Lake Chad",
         correctOption: "optionA"
     },
-
+    id++,
     {
+        id: id,
         question: "_____ is the hottest Continent on Earth ?",
         optionA: "Oceania",
         optionB: "Antarctica",
@@ -61,8 +71,9 @@ const questions = [
         optionD: "North America",
         correctOption: "optionC"
     },
-
+    id++,
     {
+        id: id,
         question: "Which country is the largest in the world ?",
         optionA: "Russia",
         optionB: "Canada",
@@ -70,8 +81,9 @@ const questions = [
         optionD: "Egypt",
         correctOption: "optionA"
     },
-
+    id++,
     {
+        id: id,
         question: "Which of these numbers is an odd number ?",
         optionA: "Ten",
         optionB: "Twelve",
@@ -79,8 +91,9 @@ const questions = [
         optionD: "Eleven",
         correctOption: "optionD"
     },
-
+    id++,
     {
+        id: id,
         question: `"You Can't see me" is a popular saying by`,
         optionA: "Eminem",
         optionB: "Bill Gates",
@@ -88,8 +101,9 @@ const questions = [
         optionD: "John Cena",
         correctOption: "optionD"
     },
-
+    id++,
     {
+        id: id,
         question: "Where is the world tallest building located ?",
         optionA: "Africa",
         optionB: "California",
@@ -97,8 +111,9 @@ const questions = [
         optionD: "Italy",
         correctOption: "optionC"
     },
-
+    id++,
     {
+        id: id,
         question: "The longest river in the United Kingdom is ?",
         optionA: "River Severn",
         optionB: "River Mersey",
@@ -106,9 +121,10 @@ const questions = [
         optionD: "River Tweed",
         correctOption: "optionA"
     },
-
+    id++,
 
     {
+        id: id,
         question: "How many permanent teeth does a dog have ?",
         optionA: "38",
         optionB: "42",
@@ -116,8 +132,9 @@ const questions = [
         optionD: "36",
         correctOption: "optionB"
     },
-
+    id++,
     {
+        id: id,
         question: "Which national team won the football World cup in 2018 ?",
         optionA: "England",
         optionB: "Brazil",
@@ -125,8 +142,9 @@ const questions = [
         optionD: "France",
         correctOption: "optionD"
     },
-
+    id++,
     {
+        id: id,
         question: "Which US state was Donald Trump Born ?",
         optionA: "New York",
         optionB: "California",
@@ -134,97 +152,16 @@ const questions = [
         optionD: "Los Angeles",
         correctOption: "optionA"
     },
-
+    id++,
     {
+        id: id,
         question: "How man states does Nigeria have ?",
         optionA: "24",
         optionB: "30",
         optionC: "36",
         optionD: "37",
         correctOption: "optionC"
-    },
-
-    {
-        question: "____ is the capital of Nigeria ?",
-        optionA: "Abuja",
-        optionB: "Lagos",
-        optionC: "Calabar",
-        optionD: "Kano",
-        correctOption: "optionA"
-    },
-
-    {
-        question: "Los Angeles is also known as ?",
-        optionA: "Angels City",
-        optionB: "Shining city",
-        optionC: "City of Angels",
-        optionD: "Lost Angels",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "What is the capital of Germany ?",
-        optionA: "Georgia",
-        optionB: "Missouri",
-        optionC: "Oklahoma",
-        optionD: "Berlin",
-        correctOption: "optionD"
-    },
-
-    {
-        question: "How many sides does an hexagon have ?",
-        optionA: "Six",
-        optionB: "Sevene",
-        optionC: "Four",
-        optionD: "Five",
-        correctOption: "optionA"
-    },
-
-    {
-        question: "How many planets are currently in the solar system ?",
-        optionA: "Eleven",
-        optionB: "Seven",
-        optionC: "Nine",
-        optionD: "Eight",
-        correctOption: "optionD"
-    },
-
-    {
-        question: "Which Planet is the hottest ?",
-        optionA: "Jupitar",
-        optionB: "Mercury",
-        optionC: "Earth",
-        optionD: "Venus",
-        correctOption: "optionB"
-    },
-
-    {
-        question: "where is the smallest bone in human body located?",
-        optionA: "Toes",
-        optionB: "Ears",
-        optionC: "Fingers",
-        optionD: "Nose",
-        correctOption: "optionB"
-    },
-
-    {
-        question: "How many hearts does an Octopus have ?",
-        optionA: "One",
-        optionB: "Two",
-        optionC: "Three",
-        optionD: "Four",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "How many teeth does an adult human have ?",
-        optionA: "28",
-        optionB: "30",
-        optionC: "32",
-        optionD: "36",
-        correctOption: "optionC"
     }
-
 ]
 
 
@@ -250,7 +187,7 @@ let indexNumber = 0
 function NextQuestion(index) {
     handleQuestions()
     const currentQuestion = shuffledQuestions[index]
-    document.getElementById("question-number").innerHTML = questionNumber
+    document.getElementById("question-number").innerHTML = currentQuestion.id
     document.getElementById("player-score").innerHTML = playerScore
     document.getElementById("display-question").innerHTML = currentQuestion.question;
     document.getElementById("option-one-label").innerHTML = currentQuestion.optionA;
