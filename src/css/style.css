@@ -42,6 +42,7 @@ header{
     border-radius: 100%;
 }
 
+/*Paramétrage du footer*/
 footer{
     position: fixed; 
     bottom: 0; 
@@ -49,6 +50,17 @@ footer{
     background-color: #2A2F40;
     padding: 10px; 
     text-align: center; 
+    height: 4em;
+    
+}
+
+.bouton {
+    margin-top: 1.2em;
+}
+
+.bouton a{
+    color: white;
+    text-decoration: none;
 }
 
 .bouton a{
