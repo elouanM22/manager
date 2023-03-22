@@ -1,9 +1,8 @@
-let id = 0;
+let id = 0
 
 const questions = [
-    id++,
     {
-        id: id,
+        id: id++,
         question: "QUESTION ",
         optionA: "10 days",
         optionB: "14 days",
@@ -11,9 +10,8 @@ const questions = [
         optionD: "7 days",
         correctOption: "optionD"
     },
-    id++,
     {
-        id: id,
+        id: id++,
         question: "How many players are allowed on a soccer pitch ?",
         optionA: "10 players",
         optionB: "11 players",
@@ -21,9 +19,8 @@ const questions = [
         optionD: "12 players",
         correctOption: "optionB"
     },
-    id++,
     {
-        id: id,
+        id: id++,
         question: "Who was the first President of USA ?",
         optionA: "Donald Trump",
         optionB: "Barack Obama",
@@ -31,9 +28,8 @@ const questions = [
         optionD: "George Washington",
         correctOption: "optionD"
     },
-    id++,
     {
-        id: id,
+        id: id++,
         question: "30 days has ______ ?",
         optionA: "January",
         optionB: "December",
@@ -41,9 +37,8 @@ const questions = [
         optionD: "August",
         correctOption: "optionC"
     },
-    id++,
     {
-        id: id,
+        id: id++,
         question: "How manay hours can be found in a day ?",
         optionA: "30 hours",
         optionB: "38 hours",
@@ -51,9 +46,8 @@ const questions = [
         optionD: "24 hours",
         correctOption: "optionD"
     },
-    id++,
     {
-        id: id,
+        id: id++,
         question: "Which is the longest river in the world ?",
         optionA: "River Nile",
         optionB: "Long River",
@@ -61,9 +55,8 @@ const questions = [
         optionD: "Lake Chad",
         correctOption: "optionA"
     },
-    id++,
     {
-        id: id,
+        id: id++,
         question: "_____ is the hottest Continent on Earth ?",
         optionA: "Oceania",
         optionB: "Antarctica",
@@ -71,9 +64,8 @@ const questions = [
         optionD: "North America",
         correctOption: "optionC"
     },
-    id++,
     {
-        id: id,
+        id: id++,
         question: "Which country is the largest in the world ?",
         optionA: "Russia",
         optionB: "Canada",
@@ -81,9 +73,8 @@ const questions = [
         optionD: "Egypt",
         correctOption: "optionA"
     },
-    id++,
     {
-        id: id,
+        id: id++,
         question: "Which of these numbers is an odd number ?",
         optionA: "Ten",
         optionB: "Twelve",
@@ -91,9 +82,8 @@ const questions = [
         optionD: "Eleven",
         correctOption: "optionD"
     },
-    id++,
     {
-        id: id,
+        id: id++,
         question: `"You Can't see me" is a popular saying by`,
         optionA: "Eminem",
         optionB: "Bill Gates",
@@ -101,9 +91,8 @@ const questions = [
         optionD: "John Cena",
         correctOption: "optionD"
     },
-    id++,
     {
-        id: id,
+        id: id++,
         question: "Where is the world tallest building located ?",
         optionA: "Africa",
         optionB: "California",
@@ -111,9 +100,8 @@ const questions = [
         optionD: "Italy",
         correctOption: "optionC"
     },
-    id++,
     {
-        id: id,
+        id: id++,
         question: "The longest river in the United Kingdom is ?",
         optionA: "River Severn",
         optionB: "River Mersey",
@@ -121,10 +109,8 @@ const questions = [
         optionD: "River Tweed",
         correctOption: "optionA"
     },
-    id++,
-
     {
-        id: id,
+        id: id++,
         question: "How many permanent teeth does a dog have ?",
         optionA: "38",
         optionB: "42",
@@ -132,9 +118,8 @@ const questions = [
         optionD: "36",
         correctOption: "optionB"
     },
-    id++,
     {
-        id: id,
+        id: id++,
         question: "Which national team won the football World cup in 2018 ?",
         optionA: "England",
         optionB: "Brazil",
@@ -142,9 +127,8 @@ const questions = [
         optionD: "France",
         correctOption: "optionD"
     },
-    id++,
     {
-        id: id,
+        id: id++,
         question: "Which US state was Donald Trump Born ?",
         optionA: "New York",
         optionB: "California",
@@ -152,9 +136,8 @@ const questions = [
         optionD: "Los Angeles",
         correctOption: "optionA"
     },
-    id++,
     {
-        id: id,
+        id: id++,
         question: "How man states does Nigeria have ?",
         optionA: "24",
         optionB: "30",
@@ -175,6 +158,8 @@ function handleQuestions() {
             shuffledQuestions.push(random)
         }
     }
+    console.log(questions.length)
+    console.log(shuffledQuestions)
 }
 
 
