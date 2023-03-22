@@ -1,21 +1,20 @@
 main {
-    width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-top: 10%;
 }
 
 .game-quiz-container {
-    width: 40rem;
+    width: 55rem;
     height: 30rem;
-    background-color: lightgray;
+    background-color: #F2F2F2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     border-radius: 30px;
+    opacity: 0.93;
 }
 
 .game-details-container {
@@ -36,12 +35,12 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid darkgray;
+    border: 2px solid #2A2F40;
     border-radius: 25px;
 }
 
 .game-question-container h1 {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     text-align: center;
     padding: 3px;
 }
@@ -53,14 +52,16 @@ main {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    
 }
 
 .game-options-container span {
     width: 45%;
     height: 3rem;
-    border: 2px solid darkgray;
+    border: 2px solid #2A2F40;
     border-radius: 20px;
     overflow: hidden;
+    font-weight: 600;
 }
 
 span label {
@@ -71,7 +72,6 @@ span label {
     justify-content: center;
     cursor: pointer;
     transition: transform 0.3s;
-    font-weight: 600;
     color: rgb(22, 22, 22);
 }
 
@@ -106,7 +106,7 @@ input[type=radio]:checked~.option {
     background: none;
     color: rgb(25, 25, 25);
     font-weight: 600;
-    border: 2px solid gray;
+    border: 2px solid #2A2F40;
     cursor: pointer;
     outline: none;
 }
