@@ -1,0 +1,46 @@
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #2A2F40;
+}
+.accueil {
+    display: flex;
+    justify-content: flex-start;
+}
+.logo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo img{
+    width: 5em;
+    margin-right: 2em;
+    border-radius: 100%;
+
+}
+
+.accueil a {
+    color: white;
+    text-decoration: none;
+}
+  
+ul {
+    list-style-type: none;
+}
+
+body {
+    background-image: url("img/fond.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2A2F40;
+}
