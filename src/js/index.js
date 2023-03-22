@@ -145,16 +145,15 @@ const questions = [
     }
 ]
 
-
-
 let questionNumber = 1
 let playerScore = 0
 let wrongAttempt = 0
-let indexNumber = 0
+var indexNumber = 0
+
 
 // function for displaying next question in the array to dom
 function NextQuestion(index) {
-    const currentQuestion = questions[0]
+    const currentQuestion = questions[index]
     document.getElementById("question-number").innerHTML = currentQuestion.id
     document.getElementById("player-score").innerHTML = playerScore
     document.getElementById("display-question").innerHTML = currentQuestion.question;
@@ -162,63 +161,58 @@ function NextQuestion(index) {
     document.getElementById("option-two-label").innerHTML = currentQuestion.optionB;
     document.getElementById("option-three-label").innerHTML = currentQuestion.optionC;
     document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
-
-
-
 }
 
 
 function checkForAnswer() {
-    const currentQuestion = questions[indexNumber] //gets current Question 
-    const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
-    const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
-    let checkedOption = null
+    let currentQuestion = questions[indexNumber];
+    let options = document.getElementsByName("option");
 
-    options.forEach((option) => {
-        if (option.value === currentQuestionAnswer) {
-            //get's correct's radio input with correct answer
-            correctOption = option.labels[0].id
-        }
-    })
-
-    //checking to make sure a radio input has been checked or an option being chosen
+    // Vérification pour s'assurer qu'une option a été choisie
     if (options[0].checked === false && options[1].checked === false && options[2].checked === false && options[3].checked == false) {
-        document.getElementById('option-modal').style.display = "flex"
+        document.getElementById('option-modal').style.display = "flex";
+        return false;
     }
 
+    let ret = false;
     options.forEach((option) => {
-        if (option.checked === true) {
+        if (option.checked) {
             switch (option.value) {
                 case "optionA":
-                    console.log(questions[indexNumber].nextA)
-                    return questions[indexNumber].nextA;
+                    ret = currentQuestion.nextA;
+                    break;
                 case "optionB":
-                    console.log(questions[indexNumber].nextB)
-                    return questions[indexNumber].nextB;
+                    ret = currentQuestion.nextB;
+                    break;
                 case "optionC":
-                    console.log(questions[indexNumber].nextC)
-                    return questions[indexNumber].nextC;
+                    ret = currentQuestion.nextC;
+                    break;
                 case "optionD":
-                    console.log(questions[indexNumber].nextD)
-                    return questions[indexNumber].nextD;
+                    ret = currentQuestion.nextD;
+                    break;
+                default:
+                    ret = false;
+                    break;
             }
-
         }
-    })
-
+    });
+    return ret;
 }
+
 
 
 
 //called when the next button is called
 function handleNextQuestion() {
-    checkForAnswer()
+    let nextQuestion = 99
+    nextQuestion = checkForAnswer()
+    indexNumber = nextQuestion
     unCheckRadioButtons()
     //delays next question displaying for a second
     setTimeout(() => {
-        if (indexNumber <= 8) {
-
-            NextQuestion(indexNumber)
+        if (true) {
+            console.log("affichage question: " + nextQuestion)
+            NextQuestion(nextQuestion)
         }
         else {
             handleEndGame()
