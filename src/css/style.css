@@ -44,7 +44,6 @@ header{
 
 /*Paramétrage du footer*/
 footer{
-    position: fixed; 
     bottom: 0; 
     width: 100%; 
     background-color: #2A2F40;
