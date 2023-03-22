@@ -1,11 +1,12 @@
 
 
 .intro{
+    display: flex;
+    justify-content: center;
     flex-direction: column;
     background-color: #F2F2F2;
-    margin-top: 5em;
-    margin-bottom: 5em;
-}
+    margin: 5em 10em 5em 10em;
+    border-radius: 15px 15px 15px 15px;}
 
 h1{
     display: flex;
@@ -16,8 +17,14 @@ h1{
     display: flex;
     list-style-type: none;
     justify-content: flex-end;
+    margin: 0em 2em 2em 0em;
 }
 
 .quiz a {
     color: black;
-    text-decoration: none;}
+    text-decoration: none;
+}
+
+p{
+    margin: 0em 2em 0em 2em;
+} 
