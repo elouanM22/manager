@@ -7,7 +7,7 @@ const questions = [
         optionA: "Particulier",
         optionB: "Professionnel",
         nextA: 1,
-        nextB: 99,
+        nextB: 14,
         correctOption: "optionA",
         theme: "pro"
     },
@@ -188,7 +188,7 @@ const questions = [
     },
     {
         id: 15,
-        question: "Ces typologies d’attaques sont-elles toutes des attaques informatiques : Déni de service, Cheval de Troie, Fraude au président, Phishing (ou hameçonnage), Ransomware (ou rançongiciel)",
+        question: "Ces typologies d'attaques sont-elles toutes des attaques informatiques : Déni de service, Cheval de Troie, Fraude au président, Phishing (ou hameçonnage), Ransomware (ou rançongiciel)",
         optionA: "Oui",
         optionB: "Non",
         nextA: 16,
@@ -211,10 +211,10 @@ const questions = [
     {
         id: 17,
         question: "Selon vous, quelle(s) conséquence(s) une cyber-attaque peut-elle avoir sur votre entreprise ?",
-        optionA: "Un blocage de l’activité",
+        optionA: "Un blocage de l'activité",
         optionB: "Une perte de confiance des clients, salariés, partenaires, fournisseurs",
         optionC: "Un vol de données stratégiques",
-        optionD: "L’ensemble de ces conséquences",
+        optionD: "L'ensemble de ces conséquences",
         nextA: 18,
         nextB: 18,
         nextC: 18,
@@ -224,7 +224,7 @@ const questions = [
     },
     {
         id: 18,
-        question: "La cybersécurité n’est qu’une question de confiance",
+        question: "La cybersécurité n'est qu'une question de confiance",
         optionA: "Oui",
         optionB: "Non",
         nextA: 19,
@@ -288,7 +288,7 @@ function NextQuestion(index) {
             span4.style.display = "none";
         }
 
-        document.getElementById("question-number").innerHTML = currentQuestion.id
+        document.getElementById("question-number").innerHTML = currentQuestion.id + 1
         document.getElementById("player-score").innerHTML = playerScore
         document.getElementById("display-question").innerHTML = currentQuestion.question;
         document.getElementById("option-one-label").innerHTML = currentQuestion.optionA;

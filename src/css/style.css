@@ -6,13 +6,13 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('/src/img/fond.png');
-    background-size:cover;
+    background-image: url('../img/fond.png');
+    background-size: cover;
     min-height: 100vh;
 }
 
 /*Paramétrage du header*/
-header{
+header {
     display: flex;
     flex-flow: row;
     justify-content: space-around;
@@ -42,12 +42,12 @@ header{
 }
 
 /*Paramétrage du footer*/
-footer{
-    position:fixed;
-    bottom: 0; 
-    width: 100%; 
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: #2A2F40;
-    text-align: center; 
+    text-align: center;
     height: 4em;
 }
 
@@ -56,8 +56,7 @@ footer{
 
 }
 
-.bouton a{
+.bouton a {
     color: white;
     text-decoration: none;
 }
-
