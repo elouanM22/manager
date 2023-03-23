@@ -25,6 +25,24 @@ header {
     right: 0;
 }
 
+.onglets {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.answers {
+    width: 30%;
+}
+
+.answers a {
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+}
+
 .accueil {
     width: 30%;
 }
@@ -43,7 +61,7 @@ header {
 
 /*Paramétrage du footer*/
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     background-color: #2A2F40;

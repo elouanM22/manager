@@ -1,0 +1,27 @@
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(242, 242, 242, 0.9);
+    margin: 5em 10em 5em 10em;
+    border-radius: 15px 15px 15px 15px;
+    padding : 1em 1em 1em 1em;
+} 
+
+#theme-base  {
+    display: flex;
+    margin-top: 2em;
+} 
+
+#theme-base a  {
+    color: black;
+} 
+
+h1{
+    font-weight: bold;
+} 
+
+p{
+    margin-top: 2em;
+} 
+
