@@ -18,8 +18,8 @@ const questions = [
         optionA: "Non, je suis débutant",
         optionB: "Je me débrouille",
         optionC: "Oui, je m'y connais bien",
-        nextA: 2,
-        nextB: 2,
+        nextA: 4,
+        nextB: 3,
         nextC: 2,
         correctOption: "optionB",
         theme: "base"
@@ -162,7 +162,7 @@ const questions = [
         optionA: "Oui",
         optionB: "Non",
         nextA: 13,
-        nextB: 13,
+        nextB: 99,
         correctOption: "optionA",
         theme: "sauvegarde"
     },
@@ -171,8 +171,8 @@ const questions = [
         question: "Vos sauvegardes sont-elles séparés geographiquement de votre appareil",
         optionA: "Oui",
         optionB: "Non",
-        nextA: 14,
-        nextB: 14,
+        nextA: 99,
+        nextB: 99,
         correctOption: "optionA",
         theme: "sauvegarde"
     },

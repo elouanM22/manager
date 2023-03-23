@@ -38,8 +38,10 @@
         </div>
         <div id="theme-pratique">
             <h1>Pratique</h1>
+            <p>En attente </p>
         </div>
         <div id="theme-mdp">
+            <h1>Mots de passe</h1>
             <p>Les mots de passe restent toujours un des piliers d’une bonne hygiene cyber.
                 Dans la pratique, il est toujours impossible d’utiliser un mot de passe fort et différent pour chaque
                 service
@@ -56,6 +58,7 @@
 
 
         <div id="theme-sauvegarde">
+            <h1>Sauvegardes</h1>
             <p>Les sauvegardes font partie intégrante de la cybersécurité, particulièrement depuis l’apparition des
                 ransomwares. Dans
                 le milieu professionnel comme a la maison, il est indispensable de disposer d’une sauvegarde sécurisée
@@ -81,6 +84,7 @@
 <script>
     // Récupère les données stockées dans le stockage local
     let themesfin = JSON.parse(localStorage.getItem("themes"));
+    console.log(themesfin)
 
     let theorie = document.getElementById("theme-theorie");
     let pratique = document.getElementById("theme-pratique");
@@ -89,17 +93,12 @@
     let mdp = document.getElementById("theme-mdp");
     let sauvegarde = document.getElementById("theme-sauvegarde");
 
-    if (!themesfin.includes("pro")) {
-        pro.style.display = "none"
-    }
+
     if (!themesfin.includes("theorie")) {
         theorie.style.display = "none"
     }
     if (!themesfin.includes("pratique")) {
         pratique.style.display = "none"
-    }
-    if (!themesfin.includes("perso")) {
-        perso.style.display = "none"
     }
     if (!themesfin.includes("mdp")) {
         mdp.style.display = "none"
