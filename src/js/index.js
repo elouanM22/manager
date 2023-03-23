@@ -6,7 +6,7 @@ const questions = [
         question: "Remplissez vous ce questionnaire en tant que profesionnel ou pariculier ?",
         optionA: "Particulier",
         optionB: "Professionnel",
-        nextA: 1,
+        nextA: 99,
         nextB: 14,
         correctOption: "optionA",
         theme: "pro"
@@ -171,8 +171,8 @@ const questions = [
         question: "Vos sauvegardes sont-elles séparés geographiquement de votre appareil",
         optionA: "Oui",
         optionB: "Non",
-        nextA: 14,
-        nextB: 14,
+        nextA: 99,
+        nextB: 99,
         correctOption: "optionA",
         theme: "sauvegarde"
     },
