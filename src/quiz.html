@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hygiène Cyber</title>
+    <meta name="description" content="Bonnes pratiues sécurité informatique">
+    <link rel="stylesheet" type="text/css" href="./css/quiz.css" media="screen" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Raleway:wght@200;300;400&display=swap"
+        rel="stylesheet">
+</head>
+
+<header>
+    <div class="accueil"><a href="index.html">Accueil</a></div>
+    <img src="img/logo.png" href="index.html" id="logo">
+</header>
+
+<body onload="NextQuestion(0)">
+    <main>
+        <!-- creating a modal for when quiz ends -->
+
+        <div class="game-quiz-container">
+
+            <div class="game-details-container">
+                <h1 style="display: none;">Score : <span id="player-score"></span> / 10</h1>
+                <h1> Question <span id="question-number"></span></h1>
+            </div>
+
+            <div class="game-question-container">
+                <h1 id="display-question"></h1>
+            </div>
+
+            <div class="game-options-container">
+
+                <div class="modal-container" id="option-modal">
+
+                    <div class="modal-content-container">
+                        <h1>Merci de choisir une réponse avant de valider</h1>
+
+                        <div class="modal-button-container">
+                            <button onclick="closeOptionModal()">Continue</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <span>
+                    <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                    <label for="option-one" class="option" id="option-one-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                    <label for="option-two" class="option" id="option-two-label"></label>
+                </span>
+
+
+                <span id="option-three-span">
+                    <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                    <label for="option-three" class="option" id="option-three-label"></label>
+                </span>
+
+
+                <span id="option-four-span">
+                    <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                    <label for="option-four" class="option" id="option-four-label"></label>
+                </span>
+            </div>
+
+            <div class="next-button-container">
+                <button onclick="handleNextQuestion()">Next Question</button>
+            </div>
+
+        </div>
+    </main>
+    <!-- <footer>
+        <div class="bouton">
+
+            <a href="accueil.html">Mentions légales</a></li>
+
+        </div>
+    </footer> -->
+
+    <script src="js/index.js">
+    </script>
+</body>
+
+
+</html>

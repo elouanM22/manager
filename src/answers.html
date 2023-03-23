@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hygiène Cyber</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Raleway:wght@200;300;400&display=swap"
+        rel="stylesheet">
+    <!--pour la typo google font Raleway-->
+</head>
+
+<header>
+    <div class="accueil"><a href="index.html">Accueil</a></div>
+    <img src="img/logo.png" href="index.html" id="logo">
+</header>
+
+<body>
+    <main>
+        <div id="theme-theorie">
+            <h1>theorie</h1>
+        </div>
+        <div id="theme-pratique">
+            <h1>pratique</h1>
+        </div>
+        <div id="theme-mdp">
+            <h1>mdp</h1>
+        </div>
+        <div id="theme-base">
+            <h1>base</h1>
+        </div>
+        <div id="theme-pro">
+            <h1>pro</h1>
+        </div>
+        <div id="theme-perso">
+            <h1>perso</h1>
+        </div>
+        <div id="theme-sauvegarde">
+            <h1>sauvegarde</h1>
+        </div>
+    </main>
+
+    <footer>
+        <div class="bouton">
+
+            <a href="accueil.html">Mentions légales</a></li>
+
+        </div>
+    </footer>
+
+</body>
+
+
+<script>
+    // Récupère les données stockées dans le stockage local
+    let themesfin = JSON.parse(localStorage.getItem("themes"));
+
+    let theorie = document.getElementById("theme-theorie");
+    let pratique = document.getElementById("theme-pratique");
+    let pro = document.getElementById("theme-pro");
+    let perso = document.getElementById("theme-perso");
+    let mdp = document.getElementById("theme-mdp");
+    let sauvegarde = document.getElementById("theme-sauvegarde");
+
+    if (!themesfin.includes("pro")) {
+        pro.style.display = "none"
+    }
+    if (!themesfin.includes("theorie")) {
+        theorie.style.display = "none"
+    }
+    if (!themesfin.includes("pratique")) {
+        pratique.style.display = "none"
+    }
+    if (!themesfin.includes("perso")) {
+        perso.style.display = "none"
+    }
+    if (!themesfin.includes("mdp")) {
+        mdp.style.display = "none"
+    }
+    if (!themesfin.includes("sauvegarde")) {
+        sauvegarde.style.display = "none"
+    }
+
+    // Efface les données du stockage local pour éviter de les utiliser plus tard par erreur
+    localStorage.removeItem("themes");
+
+</script>
+
+</html>
