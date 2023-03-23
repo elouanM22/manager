@@ -188,7 +188,6 @@ function NextQuestion(index) {
         document.getElementById("option-two-label").innerHTML = currentQuestion.optionB;
         document.getElementById("option-three-label").innerHTML = currentQuestion.optionC;
         document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
-
     }
 }
 
@@ -196,8 +195,6 @@ function NextQuestion(index) {
 function checkForAnswer() {
     let currentQuestion = questions[indexNumber];
     let ret = false
-    console.log(indexNumber)
-
     let options = document.getElementsByName("option");
     let currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
 
@@ -240,20 +237,22 @@ function checkForAnswer() {
 
 //called when the next button is called
 function handleNextQuestion() {
-    let nextQuestion = 99
-    nextQuestion = checkForAnswer()
-    indexNumber = nextQuestion
-    unCheckRadioButtons()
-    //delays next question displaying for a second
-    setTimeout(() => {
-        if (true) {
-            NextQuestion(nextQuestion)
-        }
-        else {
-            handleEndGame()
-        }
-        resetOptionBackground()
-    }, 100);
+    if (checkForAnswer) {
+        let nextQuestion = 99
+        nextQuestion = checkForAnswer()
+        indexNumber = nextQuestion
+        unCheckRadioButtons()
+        //delays next question displaying for a second
+        setTimeout(() => {
+            if (true) {
+                NextQuestion(nextQuestion)
+            }
+            else {
+                handleEndGame()
+            }
+            resetOptionBackground()
+        }, 100);
+    }
 }
 
 //sets options background back to null after display the right/wrong colors
