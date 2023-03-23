@@ -5,9 +5,9 @@
         optionA: "Particulier",
         optionB: "Professionnel",
         nextA: 1,
-        nextB: 1
+        nextB: 1,
     },
-{
+    {
         id: 1,
         question: "Etes vous familier avec l'informatique ?",
         optionA: "Non, je suis débutant",
@@ -19,7 +19,7 @@
         correctOption: "optionB",
         theme: "base"
     },
-{
+    {
         id: 2,
         question: "Qu'est ce que la cybersécurité ?",
         optionA: "Le chiffrmeent des données et des communications sensibles.",
@@ -33,7 +33,7 @@
         correctOption: "optionC",
         theme: "theorie"
     },
-{
+    {
         id: 3,
         question: "Qu'est ce que le phishing ?",
         optionA: "Un type de cyberattaque qui utilise des vulnérabilités logicielles pour avoir accès a des données sensibles.",
@@ -47,7 +47,7 @@
         correctOption: "optionD",
         theme: "theorie"
     },
-{
+    {
         id: 4,
         question: "Qu'est ce qu'un mot de passe fort",
         optionA: "Un mot de passe d'au moins 10 caractères contenant minuscules, majuscules, chiffres et symboles.",
@@ -61,7 +61,7 @@
         correctOption: "optionD",
         theme: "mdp"
     },
-{
+    {
         id: 5,
         question: "Utilisez vous un gestionnaire de mot de passe ?",
         optionA: "Oui",
@@ -71,7 +71,7 @@
         correctOption: "optionA",
         theme: "mdp"
     },
-{
+    {
         id: 6,
         question: "Utilisez vous de l’authentification à double facteur (2FA) ?",
         optionA: "Oui",
@@ -81,13 +81,13 @@
         correctOption: "optionA",
         theme: "mdp"
     },
-{
+    {
         id: 7,
         question: "Quel service permet de connaitre les comptes compromis dont nous sommes propriétaires ?",
         optionA: "HaveIBeenPwned",
         optionB: "HaveIBeenHacked",
-        optionC: "TODO",
-        optionD: "TODO",
+        optionC: "CNIL",
+        optionD: "ANSSI",
         nextA: 8,
         nextB: 8,
         nextC: 8,
@@ -95,7 +95,7 @@
         correctOption: "optionA",
         theme: "pratique"
     },
-{
+    {
         id: 8,
         question: "Que faire si vous rencontrez une activité suscipiceuse sur un de vos services ?",
         optionA: "Prévenir immédiatement le prestataire",
@@ -109,7 +109,7 @@
         correctOption: "optionD",
         theme: "pratique"
     },
-{
+    {
         id: 9,
         question: "Que devriez vous faire avant d'installer une nouvelle application ?",
         optionA: "La scanner a l'aide d'un programme antivirus",
@@ -123,7 +123,7 @@
         correctOption: "optionD",
         theme: "pratique"
     },
-{
+    {
         id: 10,
         question: "Qu'est ce que l'ingenierie sociale ?",
         optionA: "Une technique qui utilise la psycologie humaine et la manipulation afin de faire reveler aux personnes visées des informations confidentielles.",
@@ -137,7 +137,7 @@
         correctOption: "optionA",
         theme: "theorie"
     },
-{
+    {
         id: 11,
         question: "Que devriez vous faire en vous connectant sur un réseau public ?",
         optionA: "Eviter d'accéder a des informations personnelles ou sensibles.",
@@ -151,7 +151,7 @@
         correctOption: "optionD",
         theme: "pratique"
     },
-{
+    {
         id: 12,
         question: "Faites vous régulièrement des sauvegardes de vos données ?",
         optionA: "Oui",
@@ -161,11 +161,99 @@
         correctOption: "optionA",
         theme: "sauvegarde"
     },
-{
+    {
         id: 13,
         question: "Vos sauvegardes sont-elles séparés geographiquement de votre appareil",
         optionA: "Oui",
         optionB: "Non",
+        nextA: 14,
+        nextB: 14,
         correctOption: "optionA",
         theme: "sauvegarde"
     },
+    {
+        id: 14,
+        question: "Selon vous, le risque numérique",
+        optionA: "Est un risque opérationnel comme un autre",
+        optionB: "Est un risque technique",
+        nextA: 15,
+        nextB: 15,
+        correctOption: "optionA",
+        theme: "theorie"
+    },
+    {
+        id: 15,
+        question: "Ces typologies d’attaques sont-elles toutes des attaques informatiques : Déni de service, Cheval de Troie, Fraude au président, Phishing (ou hameçonnage), Ransomware (ou rançongiciel)",
+        optionA: "Oui",
+        optionB: "Non",
+        nextA: 16,
+        nextB: 16,
+        correctOption: "optionA",
+        theme: "theorie"
+    },
+    {
+        id: 16,
+        question: "Selon vous, la cybersécurité est un sujet",
+        optionA: "Purement technique",
+        optionB: "Purement organisationnel",
+        optionC: "Technique et organisationnel",
+        nextA: 17,
+        nextB: 17,
+        nextC: 17,
+        correctOption: "optionC",
+        theme: "theorie"
+    },
+    {
+        id: 17,
+        question: "Selon vous, quelle(s) conséquence(s) une cyber-attaque peut-elle avoir sur votre entreprise ?",
+        optionA: "Un blocage de l’activité",
+        optionB: "Une perte de confiance des clients, salariés, partenaires, fournisseurs",
+        optionC: "Un vol de données stratégiques",
+        optionD: "L’ensemble de ces conséquences",
+        nextA: 18,
+        nextB: 18,
+        nextC: 18,
+        nextD: 18,
+        correctOption: "optionD",
+        theme: "theorie"
+    },
+    {
+        id: 18,
+        question: "La cybersécurité n’est qu’une question de confiance",
+        optionA: "Oui",
+        optionB: "Non",
+        nextA: 19,
+        nextB: 19,
+        correctOption: "optionB",
+        theme: "theorie"
+    },
+    {
+        id: 19,
+        question: "Si vous êtes victime d'une cyber-attaque, pensez-vous que votre responsabilité puisse être engagée vis-à-vis de vos clients, fournisseurs ou sous-traitants ?",
+        optionA: "Oui",
+        optionB: "Non",
+        nextA: 20,
+        nextB: 20,
+        correctOption: "optionA",
+        theme: "theorie"
+    },
+    {
+        id: 20,
+        question: "Est-ce parce que vous respectez le RGPD que vous êtes protégé en matière de cybersécurité ?",
+        optionA: "Oui",
+        optionB: "Non",
+        nextA: 21,
+        nextB: 21,
+        correctOption: "optionB",
+        theme: "theorie"
+    },
+    {
+        id: 21,
+        question: "Si vous êtes victime d'une cyberattaque, est-ce utile de porter plainte ?",
+        optionA: "Oui",
+        optionB: "Non",
+        nextA: 21,
+        nextB: 21,
+        correctOption: "optionA",
+        theme: "theorie"
+    }
