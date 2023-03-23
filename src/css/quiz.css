@@ -135,6 +135,40 @@ input[type=radio]:checked~.option {
     animation: fadeIn 1.2s ease-in-out;
 }
 
+.modal-content-container {
+    width: 40rem;
+    height: 20rem;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 30px;
+    opacity: 1;
+}
+
+.modal-content-container h1 {
+    text-align : center;
+}
+
+.modal-button-container button {
+    width: 8rem;
+    height: 3.5rem;
+    border-radius: 10px;
+    background: none;
+    color: rgb(25, 25, 25);
+    font-size: medium;
+    font-weight: 600;
+    border: 2px solid #2A2F40;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+.modal-button-container button:hover {
+    background-color: #4968A6;
+}
+
 @media(min-width : 300px) and (max-width : 350px) {
     .game-quiz-container {
         width: 90%;
