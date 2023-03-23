@@ -1,5 +1,6 @@
 // thèmes particulier : mdp, 2fa, pare feu, antivirus, habitudes
 // thèmes professionnel : mdp, 2fa, pare feu, antivirus, habitudes, législatif
+
 const questions = [
     {
         id: 0,
@@ -154,9 +155,7 @@ const questions = [
         nextD: 12,
         correctOption: "optionA",
         theme: "theorie"
-    },
-
-
+    }
 ]
 
 let questionNumber = 1
@@ -168,23 +167,37 @@ var themes = []
 
 // function for displaying next question in the array to dom
 function NextQuestion(index) {
-    const currentQuestion = questions[index]
-    let optionsContainer = document.getElementById("options-container"); // génération dynamique du nb de questions
+    if (index !== false) {
+        const currentQuestion = questions[index]
+        let span3 = document.getElementById("option-three-span");
+        let span4 = document.getElementById("option-four-span");
+        span3.style.display = "inline";
+        span4.style.display = "inline";
+        if (typeof currentQuestion.optionC === "undefined") {
+            span3.style.display = "none";
+        }
 
-    document.getElementById("question-number").innerHTML = currentQuestion.id
-    document.getElementById("player-score").innerHTML = playerScore
-    document.getElementById("display-question").innerHTML = currentQuestion.question;
-    document.getElementById("option-one-label").innerHTML = currentQuestion.optionA;
-    document.getElementById("option-two-label").innerHTML = currentQuestion.optionB;
-    document.getElementById("option-three-label").innerHTML = currentQuestion.optionC;
-    document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
+        if (typeof currentQuestion.optionD === "undefined") {
+            span4.style.display = "none";
+        }
+
+        document.getElementById("question-number").innerHTML = currentQuestion.id
+        document.getElementById("player-score").innerHTML = playerScore
+        document.getElementById("display-question").innerHTML = currentQuestion.question;
+        document.getElementById("option-one-label").innerHTML = currentQuestion.optionA;
+        document.getElementById("option-two-label").innerHTML = currentQuestion.optionB;
+        document.getElementById("option-three-label").innerHTML = currentQuestion.optionC;
+        document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
+
+    }
 }
-
-
 
 
 function checkForAnswer() {
     let currentQuestion = questions[indexNumber];
+    let ret = false
+    console.log(indexNumber)
+
     let options = document.getElementsByName("option");
     let currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
 
@@ -193,8 +206,6 @@ function checkForAnswer() {
         document.getElementById('option-modal').style.display = "flex";
         return false;
     }
-
-    let ret = false
 
     options.forEach((option) => {
         if (option.checked) {
@@ -221,6 +232,7 @@ function checkForAnswer() {
             }
         }
     });
+
     console.log("themes: " + themes)
     return ret
 }
@@ -235,7 +247,6 @@ function handleNextQuestion() {
     //delays next question displaying for a second
     setTimeout(() => {
         if (true) {
-            console.log("affichage question: " + nextQuestion)
             NextQuestion(nextQuestion)
         }
         else {
@@ -306,3 +317,5 @@ function closeScoreModal() {
 function closeOptionModal() {
     document.getElementById('option-modal').style.display = "none"
 }
+
+
