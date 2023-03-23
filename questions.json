@@ -1,11 +1,12 @@
-```json
-{
+    {
         id: 0,
         question: "Remplissez vous ce questionnaire en tant que profesionnel ou pariculier ?",
         optionA: "Particulier",
         optionB: "Professionnel",
         nextA: 1,
         nextB: 1,
+        correctOption: "optionA",
+        theme: "pro"
     },
     {
         id: 1,

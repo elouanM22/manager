@@ -1,5 +1,4 @@
-// thèmes particulier : mdp, 2fa, pare feu, antivirus, habitudes
-// thèmes professionnel : mdp, 2fa, pare feu, antivirus, habitudes, législatif
+// thèmes : theorie, pratique, base, pro, mdp
 
 const questions = [
     {
@@ -8,10 +7,11 @@ const questions = [
         optionA: "Particulier",
         optionB: "Professionnel",
         nextA: 1,
-        nextB: 1,
+        nextB: 99,
         correctOption: "optionA",
         theme: "pro"
     },
+
     {
         id: 1,
         question: "Etes vous familier avec l'informatique ?",
@@ -91,8 +91,8 @@ const questions = [
         question: "Quel service permet de connaitre les comptes compromis dont nous sommes propriétaires ?",
         optionA: "HaveIBeenPwned",
         optionB: "HaveIBeenHacked",
-        optionC: "TODO",
-        optionD: "TODO",
+        optionC: "CNIL",
+        optionD: "ANSSI",
         nextA: 8,
         nextB: 8,
         nextC: 8,
@@ -144,18 +144,125 @@ const questions = [
     },
     {
         id: 11,
-        question: "Qu'est ce que l'ingenierie sociale ?",
-        optionA: "Une technique qui utilise la psycologie humaine et la manipulation afin de faire reveler aux personnes visées des informations confidentielles.",
-        optionB: "Une pratique utilisant machine learning et IA afin d'analyser le comportement humain.",
-        optionC: "L'utilisaton du charisme et de la concilience pour influencer les decisions d'une personne.",
-        optionD: "Une technique qui utilise les reseaux sociaux pour répandre de la mésinformation.",
+        question: "Que devriez vous faire en vous connectant sur un réseau public ?",
+        optionA: "Eviter d'accéder a des informations personnelles ou sensibles.",
+        optionB: "Utiliser un VPN.",
+        optionC: "Couper le Bluetooth et le partage de fichiers sur votre appareil.",
+        optionD: "Toutes ces reponses",
         nextA: 12,
         nextB: 12,
         nextC: 12,
         nextD: 12,
+        correctOption: "optionD",
+        theme: "pratique"
+    },
+    {
+        id: 12,
+        question: "Faites vous régulièrement des sauvegardes de vos données ?",
+        optionA: "Oui",
+        optionB: "Non",
+        nextA: 13,
+        nextB: 13,
+        correctOption: "optionA",
+        theme: "sauvegarde"
+    },
+    {
+        id: 13,
+        question: "Vos sauvegardes sont-elles séparés geographiquement de votre appareil",
+        optionA: "Oui",
+        optionB: "Non",
+        nextA: 14,
+        nextB: 14,
+        correctOption: "optionA",
+        theme: "sauvegarde"
+    },
+    {
+        id: 14,
+        question: "Selon vous, le risque numérique",
+        optionA: "Est un risque opérationnel comme un autre",
+        optionB: "Est un risque technique",
+        nextA: 15,
+        nextB: 15,
+        correctOption: "optionA",
+        theme: "theorie"
+    },
+    {
+        id: 15,
+        question: "Ces typologies d’attaques sont-elles toutes des attaques informatiques : Déni de service, Cheval de Troie, Fraude au président, Phishing (ou hameçonnage), Ransomware (ou rançongiciel)",
+        optionA: "Oui",
+        optionB: "Non",
+        nextA: 16,
+        nextB: 16,
+        correctOption: "optionA",
+        theme: "theorie"
+    },
+    {
+        id: 16,
+        question: "Selon vous, la cybersécurité est un sujet",
+        optionA: "Purement technique",
+        optionB: "Purement organisationnel",
+        optionC: "Technique et organisationnel",
+        nextA: 17,
+        nextB: 17,
+        nextC: 17,
+        correctOption: "optionC",
+        theme: "theorie"
+    },
+    {
+        id: 17,
+        question: "Selon vous, quelle(s) conséquence(s) une cyber-attaque peut-elle avoir sur votre entreprise ?",
+        optionA: "Un blocage de l’activité",
+        optionB: "Une perte de confiance des clients, salariés, partenaires, fournisseurs",
+        optionC: "Un vol de données stratégiques",
+        optionD: "L’ensemble de ces conséquences",
+        nextA: 18,
+        nextB: 18,
+        nextC: 18,
+        nextD: 18,
+        correctOption: "optionD",
+        theme: "theorie"
+    },
+    {
+        id: 18,
+        question: "La cybersécurité n’est qu’une question de confiance",
+        optionA: "Oui",
+        optionB: "Non",
+        nextA: 19,
+        nextB: 19,
+        correctOption: "optionB",
+        theme: "theorie"
+    },
+    {
+        id: 19,
+        question: "Si vous êtes victime d'une cyber-attaque, pensez-vous que votre responsabilité puisse être engagée vis-à-vis de vos clients, fournisseurs ou sous-traitants ?",
+        optionA: "Oui",
+        optionB: "Non",
+        nextA: 20,
+        nextB: 20,
+        correctOption: "optionA",
+        theme: "theorie"
+    },
+    {
+        id: 20,
+        question: "Est-ce parce que vous respectez le RGPD que vous êtes protégé en matière de cybersécurité ?",
+        optionA: "Oui",
+        optionB: "Non",
+        nextA: 21,
+        nextB: 21,
+        correctOption: "optionB",
+        theme: "theorie"
+    },
+    {
+        id: 21,
+        question: "Si vous êtes victime d'une cyberattaque, est-ce utile de porter plainte ?",
+        optionA: "Oui",
+        optionB: "Non",
+        nextA: 99,
+        nextB: 99,
         correctOption: "optionA",
         theme: "theorie"
     }
+
 ]
 
 let questionNumber = 1
@@ -238,13 +345,13 @@ function checkForAnswer() {
 //called when the next button is called
 function handleNextQuestion() {
     if (checkForAnswer) {
-        let nextQuestion = 99
+        let nextQuestion
         nextQuestion = checkForAnswer()
         indexNumber = nextQuestion
         unCheckRadioButtons()
         //delays next question displaying for a second
         setTimeout(() => {
-            if (true) {
+            if (nextQuestion !== 99) {
                 NextQuestion(nextQuestion)
             }
             else {
@@ -273,32 +380,15 @@ function unCheckRadioButtons() {
 
 // function for when all questions being answered
 function handleEndGame() {
-    let remark = null
-    let remarkColor = null
 
-    // condition check for player remark and remark color
-    if (playerScore <= 3) {
-        remark = "Bad Grades, Keep Practicing."
-        remarkColor = "red"
-    }
-    else if (playerScore >= 4 && playerScore < 7) {
-        remark = "Average Grades, You can do better."
-        remarkColor = "orange"
-    }
-    else if (playerScore >= 7) {
-        remark = "Excellent, Keep the good work going."
-        remarkColor = "green"
-    }
-    const playerGrade = (playerScore / 10) * 100
+    let themesfin = getThemes();
+    console.log("themes : " + themesfin)
 
-    //data to display to score board
-    document.getElementById('remarks').innerHTML = remark
-    document.getElementById('remarks').style.color = remarkColor
-    document.getElementById('grade-percentage').innerHTML = playerGrade
-    document.getElementById('wrong-answers').innerHTML = wrongAttempt
-    document.getElementById('right-answers').innerHTML = playerScore
-    document.getElementById('score-modal').style.display = "flex"
+    // Stocke les données récupérées dans le stockage local
+    localStorage.setItem("themes", JSON.stringify(themesfin));
 
+    // Redirige vers la page answers.html
+    window.location.href = "answers.html";
 }
 
 //closes score modal and resets game
@@ -317,4 +407,7 @@ function closeOptionModal() {
     document.getElementById('option-modal').style.display = "none"
 }
 
+function getThemes() {
+    return themes
+}
 
