@@ -24,6 +24,23 @@ header {
     left: 0;
     right: 0;
 }
+.onglets{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+} 
+
+.answers {
+    width: 30%;
+}
+
+.answers a {
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+}
 
 .accueil {
     width: 30%;
