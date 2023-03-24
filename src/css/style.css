@@ -65,10 +65,9 @@ header {
 
 /*Paramétrage du footer*/
 footer {
-    position: absolute;
-    width: 100%;
     height: 60px;
     text-align: center;
+    contain: content;
     background-color: #2A2F40;
 }
 
